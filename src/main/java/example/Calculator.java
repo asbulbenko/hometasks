@@ -1,10 +1,18 @@
+package example;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MainClass {
+public class Calculator {
+
+    public double summ(double a, double b){
+        return a + b;
+    }
 
     public static void main(String[] args){
         double number1,number2;
+
+        Calculator calculator = new Calculator();
 
         Scanner in = new Scanner(System.in);
 
@@ -22,7 +30,7 @@ public class MainClass {
 
         switch (in.next().charAt(0)){
             case '+':
-                System.out.println("Addition result = " + (number1 + number2));
+                System.out.println("Addition result = " + calculator.summ(number1 , number2));
                 break;
             case '-':
                 System.out.println("Subtraction result = " + (number1 - number2));
